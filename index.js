@@ -5,9 +5,15 @@ const connectDB = require('./config/db'); // Import the database connection func
 const transactionRoutes = require('./routes/transactionRoutes'); // Import transaction routes
 
 const app = express();
-app.use(cors({
-  origin: "http://localhost:3000"
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://your-frontend.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 const PORT = process.env.PORT || 8000;
 
 console.log("ENV PORT:", process.env.PORT);
