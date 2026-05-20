@@ -9,7 +9,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://cashflow-frontend-ten.vercel.app/",
+      "https://cashflow-frontend-ten.vercel.app",
     ],
     credentials: true,
   })
